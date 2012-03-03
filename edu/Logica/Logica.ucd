@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" size="740,474" id="hogar6e2sohhiqEkeiscoHelicoptero0" metadata="nsuml-1.4" initialized="true" showWireOptions="1">
+  <children xsi:type="editmodel:ClassEditModel" location="127,60" size="148,394" id="hogar6e2sohhiqEkeiscoHelicoptero4" runTimeClassModel="hogar6e2sohhiqEkeiscoHelicoptero132;hogar6e2sohhiqEkeiscoHelicoptero2045;hogar6e2sohhiqEkeiscoHelicoptero3736;hogar6e2sohhiqEkeiscoHelicoptero3531;hogar6e2sohhiqEkeiscoHelicoptero16;hogar6e2sohhiqEkeiscoHelicoptero335;hogar6e2sohhiqEkeiscoHelicoptero22;hogar6e2sohhiqEkeiscoHelicoptero149;hogar6e2sohhiqEkeiscoHelicoptero11;hogar6e2sohhiqEkeiscoHelicoptero6;hogar6e2sohhiqEkeiscoHelicoptero260;hogar6e2sohhiqEkeiscoHelicoptero62;hogar6e2sohhiqEkeiscoHelicoptero20;hogar6e2sohhiqEkeiscoHelicoptero4012;hogar6e2sohhiqEkeiscoHelicoptero2616;hogar6e2sohhiqEkeiscoHelicoptero35;hogar6e2sohhiqEkeiscoHelicoptero429;hogar6e2sohhiqEkeiscoHelicoptero4011;hogar6e2sohhiqEkeiscoHelicoptero13;hogar6e2sohhiqEkeiscoHelicoptero3552;hogar6e2sohhiqEkeiscoHelicoptero1335;hogar6e2sohhiqEkeiscoHelicoptero144;hogar6e2sohhiqEkeiscoHelicoptero82;hogar6e2sohhiqEkeiscoHelicoptero9;hogar6e2sohhiqEkeiscoHelicoptero3550;hogar6e2sohhiqEkeiscoHelicoptero1341;hogar6e2sohhiqEkeiscoHelicoptero2635;hogar6e2sohhiqEkeiscoHelicoptero3715">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="125,342">
+      <children xsi:type="editmodel:MethodEditModel" id="hogar6e2sohhiqEkeiscoHelicoptero144"/>
+      <children xsi:type="editmodel:MethodEditModel" id="hogar6e2sohhiqEkeiscoHelicoptero62"/>
+      <children xsi:type="editmodel:MethodEditModel" id="hogar6e2sohhiqEkeiscoHelicoptero149"/>
+      <children xsi:type="editmodel:MethodEditModel" id="hogar6e2sohhiqEkeiscoHelicoptero13"/>
+      <children xsi:type="editmodel:MethodEditModel" id="hogar6e2sohhiqEkeiscoHelicoptero20"/>
+      <children xsi:type="editmodel:MethodEditModel" id="hogar6e2sohhiqEkeiscoHelicoptero335"/>
+      <children xsi:type="editmodel:MethodEditModel" id="hogar6e2sohhiqEkeiscoHelicoptero82"/>
+      <children xsi:type="editmodel:MethodEditModel" id="hogar6e2sohhiqEkeiscoHelicoptero35"/>
+      <children xsi:type="editmodel:MethodEditModel" id="hogar6e2sohhiqEkeiscoHelicoptero6"/>
+      <children xsi:type="editmodel:MethodEditModel" id="hogar6e2sohhiqEkeiscoHelicoptero11"/>
+      <children xsi:type="editmodel:MethodEditModel" id="hogar6e2sohhiqEkeiscoHelicoptero22"/>
+      <children xsi:type="editmodel:MethodEditModel" id="hogar6e2sohhiqEkeiscoHelicoptero1341"/>
+      <children xsi:type="editmodel:MethodEditModel" id="hogar6e2sohhiqEkeiscoHelicoptero1335"/>
+      <children xsi:type="editmodel:MethodEditModel" id="hogar6e2sohhiqEkeiscoHelicoptero2045"/>
+      <children xsi:type="editmodel:MethodEditModel" id="hogar6e2sohhiqEkeiscoHelicoptero3550"/>
+      <children xsi:type="editmodel:MethodEditModel" id="hogar6e2sohhiqEkeiscoHelicoptero3736"/>
+      <children xsi:type="editmodel:MethodEditModel" id="hogar6e2sohhiqEkeiscoHelicoptero2635"/>
+      <children xsi:type="editmodel:MethodEditModel" id="hogar6e2sohhiqEkeiscoHelicoptero3552"/>
+      <children xsi:type="editmodel:MethodEditModel" id="hogar6e2sohhiqEkeiscoHelicoptero2616"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showPublicMethods="true" showPackageMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" location="321,50" size="128,268" id="hogar6e2sohhiqEkeiscoHelicoptero1301" runTimeClassModel="hogar6e2sohhiqEkeiscoHelicoptero1318;hogar6e2sohhiqEkeiscoHelicoptero1356;hogar6e2sohhiqEkeiscoHelicoptero4249;hogar6e2sohhiqEkeiscoHelicoptero1387;hogar6e2sohhiqEkeiscoHelicoptero1303;hogar6e2sohhiqEkeiscoHelicoptero1378;hogar6e2sohhiqEkeiscoHelicoptero1389;hogar6e2sohhiqEkeiscoHelicoptero1361;hogar6e2sohhiqEkeiscoHelicoptero4248;hogar6e2sohhiqEkeiscoHelicoptero4262;hogar6e2sohhiqEkeiscoHelicoptero1363;hogar6e2sohhiqEkeiscoHelicoptero1373;hogar6e2sohhiqEkeiscoHelicoptero1375;hogar6e2sohhiqEkeiscoHelicoptero1366;hogar6e2sohhiqEkeiscoHelicoptero1351;hogar6e2sohhiqEkeiscoHelicoptero1322">
+    <children xsi:type="editmodel:CompartmentEditModel" size="105,18">
+      <children xsi:type="editmodel:AttributeEditModel" id="hogar6e2sohhiqEkeiscoHelicoptero4249"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="101,198">
+      <children xsi:type="editmodel:MethodEditModel" id="hogar6e2sohhiqEkeiscoHelicoptero1318"/>
+      <children xsi:type="editmodel:MethodEditModel" id="hogar6e2sohhiqEkeiscoHelicoptero1322"/>
+      <children xsi:type="editmodel:MethodEditModel" id="hogar6e2sohhiqEkeiscoHelicoptero1351"/>
+      <children xsi:type="editmodel:MethodEditModel" id="hogar6e2sohhiqEkeiscoHelicoptero1387"/>
+      <children xsi:type="editmodel:MethodEditModel" id="hogar6e2sohhiqEkeiscoHelicoptero1361"/>
+      <children xsi:type="editmodel:MethodEditModel" id="hogar6e2sohhiqEkeiscoHelicoptero1373"/>
+      <children xsi:type="editmodel:MethodEditModel" id="hogar6e2sohhiqEkeiscoHelicoptero1303"/>
+      <children xsi:type="editmodel:MethodEditModel" id="hogar6e2sohhiqEkeiscoHelicoptero1389"/>
+      <children xsi:type="editmodel:MethodEditModel" id="hogar6e2sohhiqEkeiscoHelicoptero1363"/>
+      <children xsi:type="editmodel:MethodEditModel" id="hogar6e2sohhiqEkeiscoHelicoptero1375"/>
+      <children xsi:type="editmodel:MethodEditModel" id="hogar6e2sohhiqEkeiscoHelicoptero4262"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showPublicMethods="true" showPackageMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" location="479,31" size="93,88" id="hogar6e2sohhiqEkeiscoHelicoptero4838" runTimeClassModel="hogar6e2sohhiqEkeiscoHelicoptero4841;hogar6e2sohhiqEkeiscoHelicoptero4844">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="70,36">
+      <children xsi:type="editmodel:MethodEditModel" id="hogar6e2sohhiqEkeiscoHelicoptero4841"/>
+      <children xsi:type="editmodel:MethodEditModel" id="hogar6e2sohhiqEkeiscoHelicoptero4844"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showPublicMethods="true" showPackageMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true"/>
+  </children>
+  <classDiagramPreferences xsi:type="editmodel:UMLClassDiagramPreference" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showPublicMethods="true" showPackageMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showInterfaceStereotype="true" showClassStereotype="true" showPackageStereotype="true"/>
+</editmodel:ClassDiagramEditModel>

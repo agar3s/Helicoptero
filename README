@@ -1,5 +1,7 @@
 Español
 
-Este es un experimento realizado en el 2004 para aprender sobre manejo de objetos gráficos en Java con Swing, Graphis y AWT
+Este es un experimento realizado en el 2004 para aprender sobre manejo de objetos gráficos en Java con Swing, Graphis y AWT, 
+quiero tomarlo como base para aprender el manejo de objetos gráficos en HTML5 con canvas y javascript
 
-
+Java 1.4 en adelante
+puede importarse como un proyecto Java de Eclipse

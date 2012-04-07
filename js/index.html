@@ -1,20 +1,138 @@
 <!DOCTYPE HTML>
 <html>
     <head>
+        <style>
+            body{
+                background-color:#555;
+                color:#FFF;
+            }
+            
+            #myCanvas {
+                background-color:#000;
+                border: 1px solid #333;
+            }
+        </style>
         <script>
+
+            var context=null;
  
+            //linea al estilo awt
+            var drawLine=function(iniX, iniY, finX, finY){
+                context.beginPath();
+                context.moveTo(iniX,iniY);
+                context.lineTo(finX,finY);
+                context.stroke();
+            }
+            var drawArc= function(centerX, centerY, radius, startingAngle, endingAngle, counterclockwise){
+                context.beginPath();
+                context.arc(centerX, centerY, radius, startingAngle, endingAngle, counterclockwise);
+                context.stroke();
+            }
+
+            var drawRect = function(iniX, iniY, width, height){
+                context.beginPath();
+                context.rect(iniX, iniY, width, height);
+                context.stroke();
+            }
+
+
+            var fillRect= function(iniX, iniY, width, height){
+                context.beginPath();
+                context.rect(iniX, iniY, width, height);
+                context.fill();
+                context.stroke();
+            }
+
+            var drawCircle = function(centerX, centerY, radius){
+                drawArc(centerX, centerY, radius, 0, Math.PI*2,false);
+            }
+
+
+            var fillCircle= function(centerX, centerY, radius){
+                context.beginPath();
+                context.arc(centerX, centerY, radius, 0, Math.PI*2, false);
+                context.fill();
+                context.stroke();
+            }
+
+            var drawPanel=function(){
+
+                //draws
+                context.lineWidth = 10;
+                context.strokeStyle = "#f00";
+                drawLine( 0, 0, 600, 450);
+
+                context.lineWidth = 1;
+                context.strokeStyle = "#0f0";
+                drawLine( 0, 0, 450, 200);
+
+                context.strokeStyle = "#00f";
+                drawLine( 650, 200, 50, 400);
+
+                context.strokeStyle = "#ff0";
+                context.lineWidth = 5;
+                drawArc(300, 220, 100, -Math.PI, Math.PI/2, false);
+
+                //shapes
+                context.strokeStyle = "#5f5";
+                context.fillStyle = "#F12233";
+                drawRect(80, 80, 200, 200);
+                fillRect(400, 200, 200, 200);
+
+                context.strokeStyle = "#f05";
+                context.fillStyle = "#fff";
+                drawCircle(300,200,50);
+                fillCircle(300,100,50);
+
+                context.save();
+                context.beginPath();
+                context.strokeStyle = "black";
+                drawCircle(50, 420, 220);
+                context.clip();
+
+                // draw blue circle inside clipping region
+                context.fillStyle = "#00D2FF"; // light blue
+                fillCircle(50 - 110, 420 - 110, 220);
+ 
+                context.fillStyle = "yellow";
+                // draw yellow circle inside clipping region
+                fillCircle(50 + 110, 420,220);
+             
+                //hippie style
+                var grd = context.createRadialGradient(50, 520, 0, 50, 520, 360);
+                grd.addColorStop(0, "red");
+                grd.addColorStop(0.3, "orange");
+                grd.addColorStop(0.5, "yellow");
+                grd.addColorStop(0.7, "green");
+                grd.addColorStop(0.8, "blue");
+                grd.addColorStop(1, "violet");
+                context.fillStyle = grd;
+                fillCircle(50, 420 + 110, 220);
+                context.restore();
+
+                context.font = "40pt Calibri";
+                context.textAlign = "right";
+                context.textBaseline = "top";
+                context.fillStyle="blue";
+                context.fillText("Hola Mundo!", 600, 0);
+                context.stroke();
+
+            }
+
+            //init
             window.onload = function(){
                 var canvas = document.getElementById("myCanvas");
-                var context = canvas.getContext("2d");
- 
-                // do stuff here
+                context = canvas.getContext("2d");
+
+                drawPanel();
+
             };
  
         </script>
     </head>
     <body>
         <h1>Helicoptero cheverongo</h1>
-        <canvas id="myCanvas" width="578" height="200" style="background-color:#000;">
+        <canvas id="myCanvas" width="600" height="450">
         </canvas>
     </body>
 </html>

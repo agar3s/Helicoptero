@@ -2,21 +2,21 @@
  * Creado el 19-mar-2004
  *
  * Para cambiar la plantilla para este archivo generado vaya a
- * Ventana&gt;Preferencias&gt;Java&gt;Generación de código&gt;Código y comentarios
+ * Ventana&gt;Preferencias&gt;Java&gt;Generaciï¿½n de cï¿½digo&gt;Cï¿½digo y comentarios
  */
-package edu.Logica;
+package edu.logica;
 
 import java.awt.Color;
 import java.awt.Graphics;
 
-import edu.presentacion.Ciudad2;
+import edu.presentacion.Ciudad;
 import edu.presentacion.IPintar;
 
 /**
  * @author Ekeisco
  *
  * Para cambiar la plantilla para este comentario de tipo generado vaya a
- * Ventana&gt;Preferencias&gt;Java&gt;Generación de código&gt;Código y comentarios
+ * Ventana&gt;Preferencias&gt;Java&gt;Generaciï¿½n de cï¿½digo&gt;Cï¿½digo y comentarios
  */
 public class Helicoptero implements Runnable,IPintar {
 
@@ -32,10 +32,10 @@ public class Helicoptero implements Runnable,IPintar {
 	
 	private boolean encendido;
 	private Thread grafica=null;
-	private Ciudad2 ciudad;
+	private Ciudad ciudad;
 
 
-	public Helicoptero(Ciudad2 ciudad){
+	public Helicoptero(Ciudad ciudad){
 		x=140;
 		y=440;
 		k=-10;

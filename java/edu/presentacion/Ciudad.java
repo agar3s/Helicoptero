@@ -2,39 +2,37 @@
  * Creado el 19-mar-2004
  *
  * Para cambiar la plantilla para este archivo generado vaya a
- * Ventana&gt;Preferencias&gt;Java&gt;Generación de código&gt;Código y comentarios
+ * Ventana&gt;Preferencias&gt;Java&gt;Generaciï¿½n de cï¿½digo&gt;Cï¿½digo y comentarios
  */
 package edu.presentacion;
 
 import java.awt.Graphics;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import java.util.Vector;
 import javax.swing.JPanel;
 
 
 
 
-import edu.Logica.Helicoptero;
+import edu.logica.Helicoptero;
 
 /**
  * @author Ekeisco
  *
  * Para cambiar la plantilla para este comentario de tipo generado vaya a
- * Ventana&gt;Preferencias&gt;Java&gt;Generación de código&gt;Código y comentarios
+ * Ventana&gt;Preferencias&gt;Java&gt;Generaciï¿½n de cï¿½digo&gt;Cï¿½digo y comentarios
  */
-public class Ciudad2 extends JPanel  implements KeyListener {
+public class Ciudad extends JPanel  implements KeyListener {
 	
 	
 
 	private Helicoptero helicoptero;
 	private int x, y; 
-	private Vector papeles;
-	private boolean encendido,votar;
+	private boolean encendido;
 	private Fondo fondo;
 	
 	
-	public Ciudad2(){
+	public Ciudad(){
 		
 
 		this.encendido=false;
@@ -66,10 +64,6 @@ public class Ciudad2 extends JPanel  implements KeyListener {
 		return encendido;
 	}
 
-	public void setVotar(boolean vot){
-		this.votar=vot;
-	}
-	
 	
 	public void keyTyped(KeyEvent ke) {
 		
@@ -106,8 +100,6 @@ public class Ciudad2 extends JPanel  implements KeyListener {
 		this.setX(0);
 		if(key==38||key==40)
 		this.setY(0);
-		if(key==86)
-		this.setVotar(false);
 		
 	}
 	
@@ -124,10 +116,6 @@ public class Ciudad2 extends JPanel  implements KeyListener {
 			helicoptero.on(g);
 		else
 			helicoptero.off(g);
-
-		
-		
-	
 		
 	}
 

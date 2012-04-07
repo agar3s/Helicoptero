@@ -11,6 +11,9 @@
                 background-color:#000;
                 border: 1px solid #333;
             }
+            a .visited{
+                text-decoration:none;
+            }
         </style>
         <script>
 
@@ -55,76 +58,56 @@
                 context.stroke();
             }
 
-            var drawPanel=function(){
+            var pintarFondo = function(){
+                context.fillStyle="ORANGE";
+                fillRect(100,100,215,550);
+                fillRect(450,50,30,550);
+                context.fillStyle="LIGHT_GRAY";
+                fillRect(400,150,130,450);
 
-                //draws
-                context.lineWidth = 10;
-                context.strokeStyle = "#f00";
-                drawLine( 0, 0, 600, 450);
+                context.fillStyle="BLACK";
 
-                context.lineWidth = 1;
-                context.strokeStyle = "#0f0";
-                drawLine( 0, 0, 450, 200);
+                for(var i=0;i<6;i++){
+                    for(var j=0;j<15;j++){
+                        fillRect(410+(i*20),160+(j*20),10,10);
+                    }
+                }
+                for(var i=0;i<7;i++){
+                    for(var j=0;j<9;j++){
+                        fillRect(110+(i*30),120+(j*40),15,20);
+                    }
+                }
 
-                context.strokeStyle = "#00f";
-                drawLine( 650, 200, 50, 400);
-
-                context.strokeStyle = "#ff0";
-                context.lineWidth = 5;
-                drawArc(300, 220, 100, -Math.PI, Math.PI/2, false);
-
-                //shapes
-                context.strokeStyle = "#5f5";
-                context.fillStyle = "#F12233";
-                drawRect(80, 80, 200, 200);
-                fillRect(400, 200, 200, 200);
-
-                context.strokeStyle = "#f05";
-                context.fillStyle = "#fff";
-                drawCircle(300,200,50);
-                fillCircle(300,100,50);
-
-                context.save();
-                context.beginPath();
-                context.strokeStyle = "black";
-                drawCircle(50, 420, 220);
-                context.clip();
-
-                // draw blue circle inside clipping region
-                context.fillStyle = "#00D2FF"; // light blue
-                fillCircle(50 - 110, 420 - 110, 220);
- 
-                context.fillStyle = "yellow";
-                // draw yellow circle inside clipping region
-                fillCircle(50 + 110, 420,220);
-             
-                //hippie style
-                var grd = context.createRadialGradient(50, 520, 0, 50, 520, 360);
-                grd.addColorStop(0, "red");
-                grd.addColorStop(0.3, "orange");
-                grd.addColorStop(0.5, "yellow");
-                grd.addColorStop(0.7, "green");
-                grd.addColorStop(0.8, "blue");
-                grd.addColorStop(1, "violet");
-                context.fillStyle = grd;
-                fillCircle(50, 420 + 110, 220);
-                context.restore();
-
-                context.font = "40pt Calibri";
-                context.textAlign = "right";
-                context.textBaseline = "top";
-                context.fillStyle="blue";
-                context.fillText("Hola Mundo!", 600, 0);
+                context.font = "10pt Calibri";
+                context.fillStyle="white";
+                context.fillText("<A> On-Off;",20,30);
+                context.fillText("Utilize las flechas de direccion para moverse;",20,43);
                 context.stroke();
 
+                //la calle
+                context.fillStyle="GRAY";
+                fillRect(0,500,750,50);
+
+                //poste
+                context.fillStyle="DARK_GRAY";
+                fillRect(490,400,10,100);
+                //fillArc(480,398,30,0,180, false);
+            }
+            var lunaParrandera = function(){
+
+                context.fillStyle="rgb("+Math.floor(Math.random()*255)+
+                                       ","+Math.floor(Math.random()*255)+
+                                       ","+Math.floor(Math.random()*255)+")";
+                fillCircle(650,50,100); 
             }
 
             //init
             window.onload = function(){
                 var canvas = document.getElementById("myCanvas");
                 context = canvas.getContext("2d");
-
-                drawPanel();
+                pintarFondo();
+                //drawPanel();
+                setInterval("lunaParrandera()", 50);
 
             };
  
@@ -132,7 +115,9 @@
     </head>
     <body>
         <h1>Helicoptero cheverongo</h1>
-        <canvas id="myCanvas" width="600" height="450">
+        <canvas id="myCanvas" width="750" height="550">
         </canvas>
+        <br />
+        <a href="https://github.com/agares-/Helicoptero">ver c&oacute;digo</a>
     </body>
 </html>

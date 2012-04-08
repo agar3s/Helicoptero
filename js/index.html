@@ -25,18 +25,18 @@
                 context.moveTo(iniX,iniY);
                 context.lineTo(finX,finY);
                 context.stroke();
-            }
+            };
             var drawArc= function(centerX, centerY, radius, startingAngle, endingAngle, counterclockwise){
                 context.beginPath();
                 context.arc(centerX, centerY, radius, startingAngle, endingAngle, counterclockwise);
                 context.stroke();
-            }
+            };
 
             var drawRect = function(iniX, iniY, width, height){
                 context.beginPath();
                 context.rect(iniX, iniY, width, height);
                 context.stroke();
-            }
+            };
 
 
             var fillRect= function(iniX, iniY, width, height){
@@ -44,11 +44,11 @@
                 context.rect(iniX, iniY, width, height);
                 context.fill();
                 context.stroke();
-            }
+            };
 
             var drawCircle = function(centerX, centerY, radius){
                 drawArc(centerX, centerY, radius, 0, Math.PI*2,false);
-            }
+            };
 
 
             var fillCircle= function(centerX, centerY, radius){
@@ -56,13 +56,32 @@
                 context.arc(centerX, centerY, radius, 0, Math.PI*2, false);
                 context.fill();
                 context.stroke();
+            };
+            //fill arc con comportamiento estilo java
+            var fillArc = function(centerX, centerY, radiusX, radiusY, startingAngle, endingAngle){
+                context.save();
+                context.beginPath();
+                if(radiusX>radiusY){
+                    context.scale(1, radiusY/radiusX);
+                    context.arc(centerX, (centerY*radiusX)/radiusY, radiusX, startingAngle, endingAngle, false);
+                    context.lineTo(centerX,(centerY*radiusX)/radiusY);
+                }else{
+                    context.scale(radiusX/radiusY, 1);
+                    context.arc((centerX*radiusY)/radiusX, centerY, radiusY, startingAngle, endingAngle, false);
+                    context.lineTo((centerX*radiusY)/radiusX, centerY);
+                }
+                context.closePath();
+                context.fill();
+                context.stroke();
+                context.restore();
             }
+            
 
             var pintarFondo = function(){
                 context.fillStyle="ORANGE";
                 fillRect(100,100,215,550);
                 fillRect(450,50,30,550);
-                context.fillStyle="LIGHT_GRAY";
+                context.fillStyle="#ccc";
                 fillRect(400,150,130,450);
 
                 context.fillStyle="BLACK";
@@ -78,36 +97,159 @@
                     }
                 }
 
-                context.font = "10pt Calibri";
-                context.fillStyle="white";
-                context.fillText("<A> On-Off;",20,30);
-                context.fillText("Utilize las flechas de direccion para moverse;",20,43);
-                context.stroke();
-
                 //la calle
                 context.fillStyle="GRAY";
                 fillRect(0,500,750,50);
 
                 //poste
-                context.fillStyle="DARK_GRAY";
+                context.fillStyle="GRAY";
                 fillRect(490,400,10,100);
-                //fillArc(480,398,30,0,180, false);
-            }
+                fillArc(495,412,15,15,Math.PI,0);
+            };
             var lunaParrandera = function(){
 
                 context.fillStyle="rgb("+Math.floor(Math.random()*255)+
                                        ","+Math.floor(Math.random()*255)+
                                        ","+Math.floor(Math.random()*255)+")";
-                fillCircle(650,50,100); 
+                fillCircle(650,50,50);
+
+                  
+                context.fillText("<A> On-Off;",20,30);
+                context.fillText("Utilize las flechas de direccion para moverse;",20,43);
+                context.stroke();
+            };
+
+            var panelEstado = function(){
+                context.fillStyle="#ccc";
+                fillRect(615,445,110,60);
+                context.fillStyle="#000";
+                fillRect(620,450,100,50);
             }
+
+            //grafica de on;
+
+            var on = function(){
+
+                context.fillStyle="#0c0";
+                fillRect(660,460,20,4);
+                fillRect(660,460,4,30);
+                fillRect(676,460,4,30);
+                fillRect(660,486,20,4);
+                fillRect(690,460,20,4);
+                fillRect(690,460,4,30);
+                fillRect(706,460,4,30);
+            }
+
+            //grafica de off;
+            var off = function(){
+
+                context.fillStyle="#c00";
+                //la o
+                fillRect(630,460,20,4);
+                fillRect(630,460,4,30);
+                fillRect(646,460,4,30);
+                fillRect(630,486,20,4);
+
+                //f
+                fillRect(660,460,20,4);
+                fillRect(660,460,4,30);
+                fillRect(660,473,20,4);
+
+                fillRect(690,460,20,4);
+                fillRect(690,460,4,30);
+                fillRect(690,473,20,4);
+
+            }
+
+
+            var helicoptero = function(){
+                this.x=140;
+                this.y=440;
+
+                this.encendido=true;
+
+                var velocity=10;
+                var phi=0;
+                var k=-10;
+                var w=26;
+                var z=62;
+
+                //x recibe un 1, -1 o 0, que significa adelante, atras o quieto
+                //y recibe un 1, -1 o 0, que significa abajo, arriba o quieto
+                this.mover = function(x, y){
+                    this.x+= x*velocity;
+                    this.y+= y*velocity;
+
+                    if(this.x>745){
+                        this.x=-145;
+                    }
+                    if(this.x<-145){
+                        this.x=745;
+                    }
+                    if(this.y>440){
+                        this.y=440;
+                    }
+                    if(y<10){
+                        this.y=10;
+                    }
+                };
+
+                this.encender = function(){
+                    this.encendido=true;
+                }
+                this.apagar = function(){
+                    this.encendido=false;
+                }
+
+                this.pintar = function(){
+
+                    context.fillStyle="white";
+                    fillRect(this.x,this.y+25,32,4);
+                    fillRect(this.x+45,this.y+40,4,16);
+                    fillRect(this.x+79,this.y+40,4,16);
+                    fillRect(this.x+25,this.y+54,80,4);
+
+
+                    fillArc(this.x+65,this.y+25,35,20, 0, Math.PI*2);
+                    //helice
+
+                    fillCircle(this.x-10,this.y+25,15);
+                    context.fillStyle="black";
+
+                    fillArc(this.x-10,this.y+25,15,15,phi,phi+Math.PI/6);
+                    fillArc(this.x-10,this.y+25,15,15,phi+Math.PI*4/6,phi+Math.PI*5/6);
+                    fillArc(this.x-10,this.y+25,15,15,phi+Math.PI*8/6,phi+Math.PI*9/6);
+
+                    //cabina
+                    context.fillStyle="rgb(0,46,91)";
+                    fillArc(this.x+65,this.y+25,35,20,-Math.PI/2,0);
+                    //la helice
+                    fillRect(this.x+63,this.y-10,4,15);
+                    fillRect(this.x+20,this.y-10,90,4);
+                    context.fillStyle="white";
+                    fillRect(this.x+k+20,this.y-10,15,4);
+                    fillRect(this.x+w+20,this.y-10,15,4);
+                    fillRect(this.x+z+20,this.y-10,15,4);
+                };
+            };
+
+            var miHelicoptero = new helicoptero();
+            var pintar = function(){
+                
+                lunaParrandera();
+                miHelicoptero.pintar();
+            };
 
             //init
             window.onload = function(){
                 var canvas = document.getElementById("myCanvas");
                 context = canvas.getContext("2d");
+                context.font = "10pt Calibri";
                 pintarFondo();
-                //drawPanel();
-                setInterval("lunaParrandera()", 50);
+                panelEstado();
+                
+                setInterval("pintar()", 50);
+
 
             };
  
